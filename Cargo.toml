@@ -1,0 +1,33 @@
+[package]
+name = "nucleo_f429zi"
+description = "Board Support Crate for the STM32 NUCLEO-F429ZI development board"
+license = "MIT"
+authors = [ "Jason Fritcher <jkf@wolfnet.org>" ]
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/jkfritcher/nucleo-f429zi"
+keywords = [
+    "arm",
+    "cortex-m",
+    "stm32f429",
+    "nucleo",
+    "f429zi",
+]
+categories = [
+    "embedded",
+    "no-std",
+]
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.3"
+stm32f4xx-hal = { version = "0.14.0", features = [ "stm32f429" ] }
+
+[dev-dependencies]
+panic-halt = "0.2"
+
+[[example]]
+name = "blinky"
+
+[[example]]
+name = "blinky_triple"
